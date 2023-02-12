@@ -1,0 +1,207 @@
+
+/*start Global Rules*/
+*{
+    box-sizing: border-box;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button:hover{
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 15%)
+}
+/*end Global Rules*/
+/*start Variables*/
+:root{
+    --main-color : #00AD7F;
+    --gray-color : #989898;
+}
+/*end Variables*/
+/*start project styling*/
+.project{
+    display: flex;
+
+}
+@media (max-width:767px) {
+    .project{
+        flex-direction: column;
+    }
+}
+/*start left side styling*/
+.project .left-side{
+    position: relative;
+    flex-basis: 30%;
+    background-color: var(--main-color);
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+.project .left-side h1{
+    color: #FAFEFD;
+    font-size: 45px;
+    margin: 0;
+    z-index: 3;
+}
+.project .left-side h1:hover{
+    letter-spacing: 2px;
+}
+.project .left-side p{
+    color: #A4F5E2;
+    padding-top: 10px;
+    width: fit-content;
+    z-index: 3;
+    line-height: 2;
+}
+.project .left-side button{
+    margin-top: 75px;
+    width: 75%;
+    border-radius: 30px;
+    background-color: transparent;
+    height: 55px;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3;
+}
+@media (max-width:767px) {
+    .project .left-side button{
+        width: 220px;
+    }
+}
+.project .left-side .circle{
+    bottom: -50px;
+    position: absolute;
+    font-size: 220px;
+    left: -55px;
+    color: #1AB58B;
+    z-index: 1;
+}
+.project .left-side .traingle{
+    border-left: #1AB58B solid 81px;
+    border-right: transparent solid 50px;
+    border-top: transparent solid 50px;
+    border-bottom: transparent solid 50px;
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    transform: rotate(232deg);
+}
+
+.project .left-side .square{
+    left: -10px;
+    border: 50px solid #1AB58B;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(35deg);
+    top: 185px;
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+}
+@media (max-width:767px){
+    .project .left-side .square{
+        top: 20px;
+    }
+}
+/*end left side styling*/
+.project .right-side{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 50px;
+}
+.project .right-side h1{
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--main-color);
+}
+.project .right-side h1:hover{
+    letter-spacing: 2px;
+}
+
+.project .right-side .social-icon {
+    padding: 20px
+}
+.project .right-side .social-icon .facebook, .twitter, .linkedin{
+    color: var(--main-color);
+    font-size: 30px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.project .right-side p{
+    color: var(--gray-color);
+    padding: 10px 0 40px 0;
+}
+.project .right-side form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.project .right-side form label:first-child{
+    position: absolute;
+    color: var(--gray-color);
+    top: 9px;
+    left: 10px;
+    font-size: 15px;
+}
+.project .right-side form label:nth-of-type(2){
+    position: absolute;
+    color: var(--gray-color);
+    top: 68px;
+    left: 10px;
+    font-size: 15px;
+}
+.project .right-side form label:last-of-type{
+    position: absolute;
+    color: var(--gray-color);
+    top: 128px;
+    font-size: 15px;
+    left: 10px
+}
+.project .right-side form input{
+    width: 400px;
+    height: 40px;
+    background-color: #E6F8E8;
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    color: #010101;
+}
+@media (max-width:767px) {
+    .project .right-side form input{
+        width: 310px;
+    }
+}
+.project .right-side form button{
+    margin: 0 auto;
+    margin-top: 75px;
+    width: 220px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    height: 55px;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3;
+    margin-bottom: 40px;
+}
+/*end project styling*/

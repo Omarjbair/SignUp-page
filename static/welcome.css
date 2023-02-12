@@ -1,0 +1,105 @@
+/*start Global Rules*/
+*{
+    box-sizing: border-box;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button:hover{
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 15%)
+}
+/*end Global Rules*/
+/*start Variables*/
+:root{
+    --main-color : #00AD7F;
+}
+/*end Variables*/
+.left-side{
+    position: relative;
+    background-color: var(--main-color);
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.left-side h1{
+    color: #FAFEFD;
+    font-size: 45px;
+    margin: 0;
+    z-index: 3;
+}
+.left-side h1:hover{
+    letter-spacing: 2px;
+}
+.left-side .circle{
+    bottom: -50px;
+    position: absolute;
+    font-size: 220px;
+    left: -55px;
+    color: #1AB58B;
+    z-index: 1;
+}
+.left-side .circle2{
+    font-size: 220px;
+    color: #1AB58B;
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: 400px;
+}
+.left-side .traingle2{
+    border-left: #1AB58B solid 121px;
+    border-right: transparent solid 121px;
+    border-top: transparent solid 121px;
+    border-bottom: transparent solid 121px;
+    color: #1AB58B;
+    transform: rotate(52deg);
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: -120px;
+    -webkit-transform: rotate(52deg);
+    -moz-transform: rotate(52deg);
+    -ms-transform: rotate(52deg);
+    -o-transform: rotate(52deg);
+}
+.left-side .traingle{
+    border-left: #1AB58B solid 81px;
+    border-right: transparent solid 50px;
+    border-top: transparent solid 50px;
+    border-bottom: transparent solid 50px;
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    transform: rotate(232deg);
+}
+
+.left-side .square{
+    left: -10px;
+    border: 50px solid #1AB58B;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(35deg);
+    top: 185px;
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+}
+.left-side .square2{
+    border: 100px solid #1AB58B;
+    position: absolute;
+    z-index: 1;
+    left: 550px;
+    bottom: -50px
+}

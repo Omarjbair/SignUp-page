@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <!--Css files-->
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Js files-->
+    <script src="static/main.js"></script>
+    <script src="static/all.min.js"></script>
+</head>
+
+<body>
+<div class="project">
+    <!--start left side section-->
+    <div class="left-side">
+        <h1>Welcome Back!</h1>
+        <p>To Keep connected with us please login with your personal information</p>
+        <button>SIGN IN</button>
+        <i class="fa-solid fa-circle circke circle"></i>
+        <span class="traingle"></span>
+        <span class="square"></span>
+    </div>
+    <!--end left side section-->
+    <!--start right side section-->
+    <div class="right-side">
+        <br>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <br>
+        {% block main %}{% endblock %}
+        <h1>Create Account</h1>
+        <div class="social-icon">
+            <i class="fa-brands fa-square-facebook facebook"></i>
+            <i class="fa-brands fa-linkedin linkedin"></i>
+            <i class="fa-brands fa-square-twitter twitter"></i>
+        </div>
+        <p>or use your email for registration</p>
+
+        <form action="{{ url_for('signup') }}" method="post">
+            <label><i class="fa-solid fa-signature"></i></label>
+            <input type="text" name="name" placeholder="Name">
+
+            <label><i class="fa-solid fa-envelope"></i></label>
+            <input type="email" name="email" placeholder="Email">
+
+            <label><i class="fa-solid fa-lock"></i></label>
+            <input type="password" name="password" placeholder="Password">
+            <button >SIGN UP</button>
+        </form>
+
+
+    </div>
+    <!--end right side section-->
+</div>
+</body>
+
+</html>
